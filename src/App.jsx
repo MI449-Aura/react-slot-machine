@@ -5,7 +5,52 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import HowToPlay from './How-To-Play';
 
-
+function Home() {
+    return(
+        <div>
+            <div class="slot-machine">
+                <h1>Casino</h1>
+                <ul class="slots">
+                    <li><img/></li>
+                    <li><img/></li>
+                    <li><img/></li>
+                </ul>
+                <button class="spinbutton">SPIN</button>
+            </div>
+            <div class="pastspins">
+                <h2>Past 5 Spins</h2>
+                <section class="spingrid">
+                    <ul class="spinrow">
+                        <li><img/></li>
+                        <li><img/></li>
+                        <li><img/></li>
+                    </ul>
+                    <ul class="spinrow">
+                        <li><img/></li>
+                        <li><img/></li>
+                        <li><img/></li>
+                    </ul>
+                    <ul class="spinrow">
+                        <li><img/></li>
+                        <li><img/></li>
+                        <li><img/></li>
+                    </ul>
+                    <ul class="spinrow">
+                        <li><img/></li>
+                        <li><img/></li>
+                        <li><img/></li>
+                    </ul>
+                    <ul class="spinrow">
+                        <li><img/></li>
+                        <li><img/></li>
+                        <li><img/></li>
+                    </ul>
+                </section>
+            </div>
+            <button class="backtotopbutton">^</button>
+        </div>
+    )
+}
 
 function App() {
 
@@ -23,7 +68,7 @@ function App() {
     </nav>
     <div className="slot-machine">
         <Routes>
-            <Route path="/" element={<h1>Casino</h1>} />
+            <Route path="/" element={Home()} />
             <Route path="/How-To-Play" element={HowToPlay()} />
             <Route path="/Professors" element={Professors()} />
         </Routes>
