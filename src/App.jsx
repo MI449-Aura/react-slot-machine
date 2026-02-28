@@ -70,7 +70,7 @@ function App() {
         <Routes>
             <Route path="/" element={Home()} />
             <Route path="/How-To-Play" element={HowToPlay()} />
-            <Route path="/Professors" element={Professors()} />
+            <Route path="/Professors" element={<h1>Professors</h1>} />
         </Routes>
     </div>
     </BrowserRouter>
