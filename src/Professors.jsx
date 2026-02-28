@@ -136,3 +136,4 @@ function Professors() {
         </div>
     )
 }
+export default Professors;
