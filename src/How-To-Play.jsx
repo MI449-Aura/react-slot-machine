@@ -8,7 +8,7 @@ function HowToPlay() {
         <div class="popupnav">
             <h1>How to play</h1>
             <button>
-                <Link to="/" title="home">x</Link>
+                <Link to="/" title="home">X</Link>
             </button>
         </div>
         <p>Click on the <strong>SPIN</strong> button to start the slot machine. It will give three random picutres of professors. If all three manage to be identical, you win the suprising reward... of visiting their offical MSU profile!</p>
