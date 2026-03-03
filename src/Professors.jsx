@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Professors() {
 
@@ -7,7 +8,9 @@ function Professors() {
             <div class="professorlist">
         <div class="popupnav">
             <h1>List of Professors</h1>
-            <button><a href="/index.html" title="home">X</a></button>
+            <button>
+                <Link to ="/" title="professors">X</Link>
+            </button>
         </div>
         <div class="professorgrid">
             <div class="professor">
