@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function HowToPlay() {
     return(
@@ -6,7 +7,9 @@ function HowToPlay() {
             <div class="howto">
         <div class="popupnav">
             <h1>How to play</h1>
-            <button><a href="/index.html" title="home">X</a></button>
+            <button>
+                <Link to="/" title="home">x</Link>
+            </button>
         </div>
         <p>Click on the <strong>SPIN</strong> button to start the slot machine. It will give three random picutres of professors. If all three manage to be identical, you win the suprising reward... of visiting their offical MSU profile!</p>
         <ul class="spinrow">
