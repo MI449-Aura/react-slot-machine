@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import './App.css'
 
-function ScrollTopButton() {
-    const ScrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
-    }
-}
-
 function Home() {
 
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showProfessors, setShowProfessors] = useState(false);
+
+    const handleScrollTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
 
     return(
         <div>
@@ -217,7 +215,7 @@ function Home() {
                     </div>
                 </div>
             )}
-            <button onClick={ScrollTopButton} class="backtotopbutton">^</button>
+            <button onClick={handleScrollTop} class="backtotopbutton">^</button>
         </div>
     )
 }
