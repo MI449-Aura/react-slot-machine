@@ -148,6 +148,62 @@ function Home() {
                                 <img src="/images/Hee-Rin-Lee.jpg" alt="Hee Rin Lee" title="Hee Rin Lee"/>
                                 <figcaption>Hee Rin Lee</figcaption>
                             </div>
+                            <div class="professor">
+                                <img src="/images/Megh-Marathe.jpg" alt="Megh Marathe" title="Megh Marathe"/>
+                                <figcaption>Megh Marathe</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Casey-ODonnell.jpg" alt="Casey O'Donnell" title="Casey O'Donnell"/>
+                                <figcaption>Casey O'Donnell</figcaption>
+                            </div>
+                            <div class="professor">
+                             <img src="/images/Jennifer-Olson.jpg" alt="Jennifer Olson" title="Jennifer Olson"/>
+                             <figcaption>Jennifer Olson</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Wei-Peng.jpg" alt="Wei Peng" title="Wei Peng"/>
+                                <figcaption>Wei Peng</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Daniel-Putman.jpg" alt="Daniel Putman" title="Daniel Putman"/>
+                                <figcaption>Daniel Putman</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Rabindra-Ratan.jpg" alt="Rabindra Ratan" title="Rabindra Ratan"/>
+                                <figcaption>Rabindra Ratan</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Ruth-Shillair.jpg" alt="Ruth Shillair" title="Ruth Shillair"/>
+                                <figcaption>Ruth Shillair</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Sarah-Swierenga.jpg" alt="Sarah Swierenga" title="Sarah Swierenga"/>
+                                <figcaption>Sarah Swierenga</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Ryan-Thompson.jpg" alt="Ryan Thompson" title="Ryan Thompson"/>
+                                <figcaption>Ryan Thompson</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Morgan-Vigil-Hayes.jpg" alt="Morgan Vigil-Hayes" title="Morgan Vigil-Hayes"/>
+                                <figcaption>Morgan Vigil-Hayes</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Valeta-Wensloff.jpg" alt="Valeta Wensloff" title="Valeta Wensloff"/>
+                                <figcaption>Valeta Wensloff</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Brian-Winn.jpg" alt="Brian Winn" title="Brian Winn"/>
+                                <figcaption>Brian Winn</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Susan-Wyche.jpg" alt="Susan Wyche" title="Susan Wyche"/>
+                                <figcaption>Susan Wyche</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/.jpg" alt="Jeff Siarto" title="Jeff Siarto"/>
+                                <figcaption>Golden Jeff</figcaption>
+                            </div>
                         </div>
                     </div>
                 </div>
