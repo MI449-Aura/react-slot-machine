@@ -108,6 +108,46 @@ function Home() {
                                 <img src="/images/Amanda-Cote.jpg" alt="Amanda Cote" title="Amanda Cote"/>
                                 <figcaption>Amanda Cote</figcaption>
                             </div>
+                            <div class="professor">
+                                <img src="/images/Andrew-Dennis.jpg" alt="Andrew Dennis" title="Andrew Dennis"/>
+                                <figcaption>Andrew Dennis</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/David-Ewoldsen.jpg" alt="David Ewoldsen" title="David Ewoldsen"/>
+                                <figcaption>David Ewoldsen</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Ricardo-Guimaraes.jpg" alt="Ricardo Guimaraes" title="Ricardo Guimaraes"/>
+                                <figcaption>Ricardo Guimaraes</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Keith-Hampton.jpg" alt="Keith Hampton" title="Keith Hampton"/>
+                                <figcaption>Keith Hampton</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Jean-Hardy.jpg" alt="Jean Hardy" title="Jean Hardy"/>
+                                <figcaption>Jean Hardy</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Cory-Heald.jpg" alt="Cory Heald" title="Cory Heald"/>
+                                <figcaption>Cory Heald</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Carrie-Heeter.jpg" alt="Carrie Heeter" title="Carrie Heeter"/>
+                                <figcaption>Carrie Heeter</figcaption>
+                            </div>
+                                <div class="professor">
+                                <img src="/images/Megan-Knittel.jpg" alt="Megan Knittel" title="Megan Knittel"/>
+                            <figcaption>Megan Knittel</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Nick-Kwiatowski.jpg" alt="Nick Kwiatowski" title="Nick Kwiatowski"/>
+                                <figcaption>Nick Kwiatowski</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Hee-Rin-Lee.jpg" alt="Hee Rin Lee" title="Hee Rin Lee"/>
+                                <figcaption>Hee Rin Lee</figcaption>
+                            </div>
                         </div>
                     </div>
                 </div>
