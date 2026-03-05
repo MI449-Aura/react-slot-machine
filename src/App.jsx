@@ -2,8 +2,26 @@ import React, { useState } from 'react'
 import './App.css'
 
 function Home() {
+
+    const [showHowToPlay, setShowHowToPlay] = useState(false);
+    const [showProfessors, setShowProfessors] = useState(false);
+
     return(
         <div>
+            <nav className="nav">
+                <ul className="logo-button">
+                    <p>MSU Media & Information Slot Machine</p>
+                </ul>
+                <ul className="nav-button">
+                    <li>
+                        <button onClick={() => setShowHowToPlay(true)}>How To Play</button>
+                    </li>
+                    <li>
+                        <button onClick={() => setShowProfessors(true)}>Professors</button>
+                    </li>
+                </ul>
+            </nav>
+            
             <div class="slot-machine">
                 <h1>Casino</h1>
                 <ul class="slots">
