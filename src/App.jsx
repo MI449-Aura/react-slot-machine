@@ -77,6 +77,41 @@ function Home() {
                     </div>
                 </div>
             )}
+
+            {showProfessors && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <button className="close-button" onClick={() => setShowProfessors(false)}>X</button>
+                        <h1>Professors</h1>
+                        <div class="professorgrid">
+                            <div class="professor">
+                                <img src="/images/Jeff-Siarto.jpg" alt="Jeff Siarto" title="Jeff Siarto"/>
+                                <figcaption>Jeff Siarto</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Young-Arygris.jpg" alt="Young Arygris" title="Young Arygris"/>
+                                <figcaption>Young Arygris</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Susan-Bonner.jpg" alt="Susan Bonner" title="Susan Bonner"/>
+                                <figcaption>Susan Bonner</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Sandra-Braman.jpg" alt="Sandra Braman" title="Sandra Braman"/>
+                                <figcaption>Sandra Braman</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Celeste-Campos-Castillo.jpg" alt="Celeste Campos-Castillo" title="Celeste Campos-Castillo"/>
+                                <figcaption>Celeste Campos-Castillo</figcaption>
+                            </div>
+                            <div class="professor">
+                                <img src="/images/Amanda-Cote.jpg" alt="Amanda Cote" title="Amanda Cote"/>
+                                <figcaption>Amanda Cote</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
             <button class="backtotopbutton">^</button>
         </div>
     )
