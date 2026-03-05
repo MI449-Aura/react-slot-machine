@@ -41,27 +41,27 @@ function Home() {
             <div class="pastspins">
                 <h2>Past 5 Spins</h2>
                 <section class="spingrid">
-                    <ul class="spinrow">
+                    <ul class="homespinrow">
                         <li><img/></li>
                         <li><img/></li>
                         <li><img/></li>
                     </ul>
-                    <ul class="spinrow">
+                    <ul class="homespinrow">
                         <li><img/></li>
                         <li><img/></li>
                         <li><img/></li>
                     </ul>
-                    <ul class="spinrow">
+                    <ul class="homespinrow">
                         <li><img/></li>
                         <li><img/></li>
                         <li><img/></li>
                     </ul>
-                    <ul class="spinrow">
+                    <ul class="homespinrow">
                         <li><img/></li>
                         <li><img/></li>
                         <li><img/></li>
                     </ul>
-                    <ul class="spinrow">
+                    <ul class="homespinrow">
                         <li><img/></li>
                         <li><img/></li>
                         <li><img/></li>
