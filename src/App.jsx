@@ -75,7 +75,7 @@ function Home() {
                         <button className="close-button" onClick={() => setShowHowToPlay(false)}>X</button>
                         <h1>How To Play</h1>
                         <p>Click on the <strong>SPIN</strong> button to start the slot machine. It will give three random picutres of professors. If all three manage to be identical, you win the suprising reward... of visiting their offical MSU profile!</p>
-                        <ul class="spinrow">
+                        <ul className="spinrow">
                             <li><img src="/images/Jeff-Siarto.jpg" alt="Jeff Siarto" title="Jeff Siarto"/></li>
                             <li><img src="/images/Jeff-Siarto.jpg" alt="Jeff Siarto" title="Jeff Siarto"/></li>
                             <li><img src="/images/Jeff-Siarto.jpg" alt="Jeff Siarto" title="Jeff Siarto"/></li>
