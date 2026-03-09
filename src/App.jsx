@@ -42,29 +42,29 @@ function Home() {
                 <h2>Past 5 Spins</h2>
                 <section class="spingrid">
                     <ul class="homespinrow">
-                        <li><img/></li>
-                        <li><img/></li>
-                        <li><img/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
                     </ul>
                     <ul class="homespinrow">
-                        <li><img/></li>
-                        <li><img/></li>
-                        <li><img/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
                     </ul>
                     <ul class="homespinrow">
-                        <li><img/></li>
-                        <li><img/></li>
-                        <li><img/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
                     </ul>
                     <ul class="homespinrow">
-                        <li><img/></li>
-                        <li><img/></li>
-                        <li><img/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
                     </ul>
                     <ul class="homespinrow">
-                        <li><img/></li>
-                        <li><img/></li>
-                        <li><img/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
+                        <li><img class="resultimg"/></li>
                     </ul>
                 </section>
             </div>
