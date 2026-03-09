@@ -81,3 +81,21 @@
 .spinrow {
   list-style-type: none;
 }
+
+.slots {
+  list-style: none;
+  padding: 0;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 6px, solid, transparent;
+  border-image: linear-gradient(
+    135deg,
+    #f6e27a,
+    #e6b422,
+    #b8860b,
+    #fff4c2
+    ) 1; 
+  border-radius: 15px;
+}
