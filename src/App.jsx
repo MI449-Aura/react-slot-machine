@@ -208,7 +208,7 @@ function Home() {
                                 <figcaption>Susan Wyche</figcaption>
                             </div>
                             <div class="professor">
-                                <img src="/images/.jpg" class="profimg" alt="Jeff Siarto" title="Jeff Siarto"/>
+                                <img src="/images/.jpg" class="profimg" gitalt="Jeff Siarto" title="Jeff Siarto"/>
                                 <figcaption>Golden Jeff</figcaption>
                             </div>
                         </div>
