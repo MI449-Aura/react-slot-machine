@@ -160,3 +160,15 @@
   border-color: black;
   border-radius: 15px;
 }
+
+.backtotopbutton {
+  border-radius: 50%;
+  border: 6px solid transparent;
+  background: 
+    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box, green;
+  background-clip: border-box, padding-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
