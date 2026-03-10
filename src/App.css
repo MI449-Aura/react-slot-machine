@@ -73,6 +73,13 @@
     ) 1; 
 }
 
+.howtojeff {
+  width:85%;
+  border: solid 5px;
+  border-radius: 15px;
+  border-color:white;
+}
+
 .close-button {
   position: absolute;
   top: 10px;
@@ -87,7 +94,12 @@
 }
 
 .spinrow {
-  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .slots {
@@ -119,6 +131,6 @@
 
 .resultimg {
   border: 6px, solid, transparent;
-  border-color: white;
+  border-color: black;
   border-radius: 15px;
 }
