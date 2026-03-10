@@ -93,6 +93,25 @@
   cursor: pointer;
 }
 
+.professorgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.professor {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.profimg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .spinrow {
   list-style: none;
   padding: 0;
