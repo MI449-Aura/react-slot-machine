@@ -105,6 +105,7 @@
 }
 
 .professorgrid {
+  margin-top: 1050px;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -123,6 +124,9 @@
   height: auto;
   display: block;
   margin: 0 auto;
+  border: solid 5px;
+  border-radius: 15px;
+  border-color:white;
 }
 
 .spinrow {
@@ -192,6 +196,7 @@
 
 .backtotopbutton {
   margin-top: 20px;
+  padding-top: 10px;
   color: #f6e27a;
   font-weight: 600;
   font-size: 15px;
