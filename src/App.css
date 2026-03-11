@@ -57,8 +57,10 @@
 }
 
 .popup-content {
-  background: white;
-  color: black;
+  background:
+    linear-gradient(#D50000, #4A0000) padding-box,
+    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
+  color: white;
   padding: 20px;
   border-radius: 15px;
   width: 80%;
@@ -93,8 +95,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: white;
-  color: black;
+  background: transparent;
+  color: white;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -189,13 +191,20 @@
 }
 
 .backtotopbutton {
-  border-radius: 50%;
-  border: 6px solid transparent;
-  background: 
-    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box, green;
-  background-clip: border-box, padding-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  margin-top: 20px;
+  color: #f6e27a;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 2px 2px 4px black;
+  border: 4px solid transparent;
+  border-radius: 50px;
+  background:
+    linear-gradient(#43D400, #154300) padding-box,
+    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
+}
+
+.backtotopbutton:hover {
+  background:
+    linear-gradient(#D50000, #4A0000) padding-box,
+    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
 }
