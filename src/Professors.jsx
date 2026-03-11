@@ -129,10 +129,6 @@ function Professors() {
                 <img src="/images/Susan-Wyche.jpg" alt="Susan Wyche" title="Susan Wyche"/>
                 <figcaption>Susan Wyche</figcaption>
             </div>
-            <div class="professor">
-                <img src="/images/.jpg" alt="Jeff Siarto" title="Jeff Siarto"/>
-                <figcaption>Golden Jeff</figcaption>
-            </div>
         </div>
     </div>
 

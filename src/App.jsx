@@ -30,12 +30,18 @@ function Home() {
             </nav>
 
             <div class="slot-machine">
-                <h1>Casino</h1>
-                <ul class="slots">
-                    <li><img/></li>
-                    <li><img/></li>
-                    <li><img/></li>
-                </ul>
+                <img src="/images/CASINO.png" class="cainso" alt="Casino" title="Casino"/>
+                <div class="slots">
+                    <ul class="slot">
+                        <li><img/></li>
+                    </ul>
+                    <ul class="slot">
+                        <li><img/></li>
+                    </ul>
+                    <ul class="slot">
+                        <li><img/></li>
+                    </ul>
+                </div>
                 <button class="spinbutton">SPIN</button>
             </div>
             <div class="pastspins">
@@ -207,13 +213,9 @@ function Home() {
                                 <img src="/images/Susan-Wyche.jpg" class="profimg" alt="Susan Wyche" title="Susan Wyche"/>
                                 <figcaption>Susan Wyche</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/.jpg" class="profimg" gitalt="Jeff Siarto" title="Jeff Siarto"/>
-                                <figcaption>Golden Jeff</figcaption>
                             </div>
                         </div>
                     </div>
-                </div>
             )}
             <button onClick={handleScrollTop} class="backtotopbutton">^</button>
         </div>
