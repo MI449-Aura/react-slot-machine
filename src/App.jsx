@@ -64,17 +64,17 @@ function Home() {
                 <div class="slots">
                     <ul class="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[0])} alt="Slot 1"/>
+                            <img src={getImageUrl(slotResults[0])} class="slotimg" alt="Slot 1"/>
                         </li>
                     </ul>
                     <ul class="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[1])} alt="Slot 2"/>
+                            <img src={getImageUrl(slotResults[1])} class="slotimg" alt="Slot 2"/>
                         </li>
                     </ul>
                     <ul class="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[2])} alt="Slot 3"/>
+                            <img src={getImageUrl(slotResults[2])} class="slotimg" alt="Slot 3"/>
                         </li>
                     </ul>
                 </div>
