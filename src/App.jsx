@@ -7,6 +7,7 @@ function Home() {
     const [showProfessors, setShowProfessors] = useState(false);
     const [professors, setProfessors] = useState([]);
     const [slotResults, setSlotResults] = useState([null, null, null]);
+    const [pastSpins, setPastSpins] = useState([]);
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/MI449-Aura/mi-department-professors-api/main/professors.json')
@@ -34,6 +35,11 @@ function Home() {
             getRandomProfessorImage()
         ];
         setSlotResults(newResults);
+
+        setPastSpins( prev => {
+            const updated = [[...newResults], ...prev].slice(0,5);
+            return updated;
+        })
     };
 
     const handleScrollTop = () => {
@@ -83,31 +89,26 @@ function Home() {
             <div class="pastspins">
                 <h2>Past 5 Spins</h2>
                 <section class="spingrid">
-                    <ul class="homespinrow">
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                    </ul>
-                    <ul class="homespinrow">
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                    </ul>
-                    <ul class="homespinrow">
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                    </ul>
-                    <ul class="homespinrow">
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                    </ul>
-                    <ul class="homespinrow">
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                        <li><img class="resultimg"/></li>
-                    </ul>
+                    {pastSpins.map((spin, index) => (
+                        <ul key={index} className="homespinrow">
+                            {spin.map((imgPath, imgIndex) => (
+                                <li key={imgIndex}>
+                                    <img
+                                        className="resultimg"
+                                        src={getImageUrl(imgPath)}
+                                        alt={`Past Spin ${index + 1}`}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    ))}
+                    {Array(5 - pastSpins.length).fill().map((_, index) => (
+                        <ul key={`empty-${index}`} className="homespinrow">
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
+                        </ul>
+                    ))}
                 </section>
             </div>
 
