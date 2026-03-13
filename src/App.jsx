@@ -1,10 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 
 function Home() {
 
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showProfessors, setShowProfessors] = useState(false);
+    const [professors, setProfessors] = useState([]);
+    const [slotResults, setSlotResults] = useState([null, null, null]);
+
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/MI449-Aura/mi-department-professors-api/main/professors.json')
+            .then(res => res.json())
+            .then(data => setProfessors(data))
+            .catch(err => console.error('Failed to load professors:', err));
+    }, []);
+
+    const getRandomProfessorImage = () => {
+        if (professors.length === 0) return null;
+        const randomProf = professors[Math.floor(Math.random() * professors.length)];
+        return randomProf.image;
+    }
+
+    const getImageUrl = (imagePath) => {
+        if (!imagePath) return '/images/placeholder.jpg';
+        if (imagePath.startsWith('http')) return imagePath;
+        return `https://raw.githubusercontent.com/MI449-Aura/mi-department-professors-api/main${imagePath}`;
+    };
+
+    const handleSpin = () => {
+        const newResults = [
+            getRandomProfessorImage(),
+            getRandomProfessorImage(),
+            getRandomProfessorImage()
+        ];
+        setSlotResults(newResults);
+    };
 
     const handleScrollTop = () => {
         window.scrollTo({
@@ -33,16 +63,22 @@ function Home() {
                 <img src="/images/CASINO.png" class="cainso" alt="Casino" title="Casino"/>
                 <div class="slots">
                     <ul class="slot">
-                        <li><img/></li>
+                        <li>
+                            <img src={getImageUrl(slotResults[0])} alt="Slot 1"/>
+                        </li>
                     </ul>
                     <ul class="slot">
-                        <li><img/></li>
+                        <li>
+                            <img src={getImageUrl(slotResults[1])} alt="Slot 2"/>
+                        </li>
                     </ul>
                     <ul class="slot">
-                        <li><img/></li>
+                        <li>
+                            <img src={getImageUrl(slotResults[2])} alt="Slot 3"/>
+                        </li>
                     </ul>
                 </div>
-                <button class="spinbutton">SPIN</button>
+                <button class="spinbutton" onClick={handleSpin}>SPIN</button>
             </div>
             <div class="pastspins">
                 <h2>Past 5 Spins</h2>
