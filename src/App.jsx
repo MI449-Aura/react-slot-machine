@@ -51,6 +51,7 @@ function Home() {
 
     return(
         <div>
+            
             <nav className="nav">
                 <ul className="logo-button">
                     <p>MSU Media & Information Slot Machine</p>

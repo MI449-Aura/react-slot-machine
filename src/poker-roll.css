@@ -1,0 +1,18 @@
+#deck-header{
+    display: flex;
+    flex-direction: row;
+}
+
+#roll-sect1{
+    float: left;
+}
+
+#roll-sect2{
+    float: right;
+}
+
+.img-1{}
+.img-2{}
+.img-3{}
+.img-4{}
+.img-5{}
