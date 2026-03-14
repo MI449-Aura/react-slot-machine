@@ -34,6 +34,7 @@ function Home() {
     };
 
     const handleSpin = () => {
+        
         const newResults = [
             getRandomProfessorImage(),
             getRandomProfessorImage(),
@@ -66,6 +67,31 @@ function Home() {
         });
       };
 
+    const instantJackpot = () => {
+        const newResults = [
+            professors[11].image,
+            professors[11].image,
+            professors[11].image
+        ];
+        setSlotResults(newResults);
+
+        setPastSpins( prev => {
+            const updated = [[...newResults], ...prev].slice(0,5);
+            return updated;
+        })
+        setSpinCount(prev => prev + 1);
+
+        if (
+            newResults[0] && 
+            newResults[0] === newResults[1] && 
+            newResults[1] === newResults[2]
+        ) {
+            const winningProfessor = professors.find(p => p.image === newResults[0]);
+            setWinningProfessor(winningProfessor);
+            setShowJackpot(true);
+        }
+    }
+    
     return(
         <div>
             <nav className="nav">
@@ -104,6 +130,8 @@ function Home() {
                 <button className="spinbutton" onClick={handleSpin}>SPIN</button>
                 <PokerRoll Trigger={spinCount} />
                 <Quote spinTrigger={spinCount} />
+                <button className="jackpot-button" onClick={instantJackpot}>Instant Jackpot</button>
+                <p>^Grading Purposes^</p>
             </div>
             <div className="pastspins">
                 <h2>Past 5 Spins</h2>
@@ -141,7 +169,7 @@ function Home() {
                             <img src={getImageUrl(winningProfessor.image)} alt="Winning Professor" className="jackpot-img"/>
                             <h2>{winningProfessor.name}</h2>
                             <p>{winningProfessor.position}</p>
-                            <button className="reward-button" onClick={() => window.open(winningProfessor.something_cool, '_blank')}>Reward</button>
+                            <button className="reward-button" onClick={() => window.open(winningProfessor.something_cool, '_blank')}>Something Cool</button>
                         </div>
                     </div>
                 </div>

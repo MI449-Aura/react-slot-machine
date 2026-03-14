@@ -78,7 +78,7 @@ button:focus-visible {
   align-items: center;
 }
 
-.nav-button button {
+.nav-button button, .jackpot-button {
   font-weight: 600;
   font-size: 20px;
   text-shadow: 2px 2px 4px black;
