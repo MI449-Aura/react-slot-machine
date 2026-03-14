@@ -6,6 +6,7 @@ function Home() {
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showProfessors, setShowProfessors] = useState(false);
     const [professors, setProfessors] = useState([]);
+    const [showJackpot, setShowJackpot] = useState(false);
     const [slotResults, setSlotResults] = useState([null, null, null]);
     const [pastSpins, setPastSpins] = useState([]);
 
@@ -40,6 +41,12 @@ function Home() {
             const updated = [[...newResults], ...prev].slice(0,5);
             return updated;
         })
+
+        if (
+            newResults[0] &&
+            newResults[0] == newResults[1] &&
+            newResults[1] == newResults[2]
+        ) {setShowJackpot(true)}
     };
 
     const handleScrollTop = () => {
@@ -111,6 +118,16 @@ function Home() {
                     ))}
                 </section>
             </div>
+
+            {showJackpot && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <button className="close-button" onClick={() => setShowJackpot(false)}>X</button>
+                        <h1>JACKPOT!</h1>
+                        <p>You got three of the same professor in one spin, congratulations! You hit the jackpot!</p>
+                    </div>
+                </div>
+            )}
 
             {showHowToPlay && (
                 <div className="popup">
