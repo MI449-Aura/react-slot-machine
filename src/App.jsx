@@ -6,6 +6,8 @@ function Home() {
 
     const [showHowToPlay, setShowHowToPlay] = useState(false);
     const [showProfessors, setShowProfessors] = useState(false);
+    const [showJackpot, setShowJackpot] = useState(false);
+    const [winningProfessor, setWinningProfessor] = useState(null);
     const [professors, setProfessors] = useState([]);
     const [slotResults, setSlotResults] = useState([null, null, null]);
     const [pastSpins, setPastSpins] = useState([]);
@@ -43,6 +45,16 @@ function Home() {
             return updated;
         })
         setSpinCount(prev => prev + 1);
+
+        if (
+            newResults[0] && 
+            newResults[0] === newResults[1] && 
+            newResults[1] === newResults[2]
+        ) {
+            const winningProfessor = professors.find(p => p.image === newResults[0]);
+            setWinningProfessor(winningProfessor);
+            setShowJackpot(true);
+        }
     };
 
     const handleScrollTop = () => {
@@ -116,6 +128,22 @@ function Home() {
                     ))}
                 </section>
             </div>
+
+            {showJackpot && winningProfessor && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <button className="close-button" onClick={() => setShowJackpot(false)}>X</button>
+                        <h1 className="jackpot-title">JACKPOT!</h1>
+                        <p>You got three of the same professor, congratulations! You hit the Jackpot!</p>
+                        <div className="jackpot-content">
+                            <img src={getImageUrl(winningProfessor.image)} alt="Winning Professor" className="jackpot-img"/>
+                            <h2>{winningProfessor.name}</h2>
+                            <p>{winningProfessor.position}</p>
+                            <a href={winningProfessor.something_cool} target="_blank" rel="noopener noreferrer" className="something-cool-btn">Reward</a>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {showHowToPlay && (
                 <div className="popup">
