@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Quote from './Quote.jsx'
 import './App.css'
+import PokerRoll from './poker-roll.jsx'
 
 function Home() {
 
@@ -67,6 +68,7 @@ function Home() {
     return(
         <div>
             
+            <PokerRoll />
             <nav className="nav">
                 <ul className="logo-button">
                     <p>MSU Media & Information Slot Machine</p>
