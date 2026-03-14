@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Quote from './Quote.jsx'
 import './App.css'
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
     const [professors, setProfessors] = useState([]);
     const [slotResults, setSlotResults] = useState([null, null, null]);
     const [pastSpins, setPastSpins] = useState([]);
+    const [spinCount, setSpinCount] = useState(0);
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/MI449-Aura/mi-department-professors-api/main/professors.json')
@@ -40,6 +42,7 @@ function Home() {
             const updated = [[...newResults], ...prev].slice(0,5);
             return updated;
         })
+        setSpinCount(prev => prev + 1);
     };
 
     const handleScrollTop = () => {
@@ -66,30 +69,31 @@ function Home() {
                 </ul>
             </nav>
 
-            <div class="slot-machine">
-                <img src="/images/CASINO.png" class="cainso" alt="Casino" title="Casino"/>
-                <div class="slots">
-                    <ul class="slot">
+            <div className="slot-machine">
+                <img src="/images/CASINO.png" className="cainso" alt="Casino" title="Casino"/>
+                <div className="slots">
+                    <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[0])} class="slotimg" alt="Slot 1"/>
+                            <img src={getImageUrl(slotResults[0])} className="slotimg" alt="Slot 1"/>
                         </li>
                     </ul>
-                    <ul class="slot">
+                    <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[1])} class="slotimg" alt="Slot 2"/>
+                            <img src={getImageUrl(slotResults[1])} className="slotimg" alt="Slot 2"/>
                         </li>
                     </ul>
-                    <ul class="slot">
+                    <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[2])} class="slotimg" alt="Slot 3"/>
+                            <img src={getImageUrl(slotResults[2])} className="slotimg" alt="Slot 3"/>
                         </li>
                     </ul>
                 </div>
-                <button class="spinbutton" onClick={handleSpin}>SPIN</button>
+                <button className="spinbutton" onClick={handleSpin}>SPIN</button>
+                <Quote spinTrigger={spinCount} />
             </div>
-            <div class="pastspins">
+            <div className="pastspins">
                 <h2>Past 5 Spins</h2>
-                <section class="spingrid">
+                <section className="spingrid">
                     {pastSpins.map((spin, index) => (
                         <ul key={index} className="homespinrow">
                             {spin.map((imgPath, imgIndex) => (
@@ -120,9 +124,9 @@ function Home() {
                         <h1>How To Play</h1>
                         <p>Click on the <strong>SPIN</strong> button to start the slot machine. It will give three random picutres of professors. If all three manage to be identical, you win the suprising reward... of visiting their offical MSU profile!</p>
                         <ul className="spinrow">
-                            <li><img src="/images/Jeff-Siarto.jpg" class="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
-                            <li><img src="/images/Jeff-Siarto.jpg" class="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
-                            <li><img src="/images/Jeff-Siarto.jpg" class="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
+                            <li><img src="/images/Jeff-Siarto.jpg" className="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
+                            <li><img src="/images/Jeff-Siarto.jpg" className="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
+                            <li><img src="/images/Jeff-Siarto.jpg" className="howtojeff" alt="Jeff Siarto" title="Jeff Siarto"/></li>
                         </ul>
                         <p>If all three images are the world-renowned designer, author, and software developer Professor Jeff Siarto, you have hit the <strong>JACKPOT!!!</strong></p>
                     </div>
@@ -134,128 +138,128 @@ function Home() {
                     <div className="popup-content">
                         <button className="close-button" onClick={() => setShowProfessors(false)}>X</button>
                         <h1>Professors</h1>
-                        <div class="professorgrid">
-                            <div class="professor">
-                                <img src="/images/Jeff-Siarto.jpg" class="profimg" alt="Jeff Siarto" title="Jeff Siarto"/>
+                        <div className="professorgrid">
+                            <div className="professor">
+                                <img src="/images/Jeff-Siarto.jpg" className="profimg" alt="Jeff Siarto" title="Jeff Siarto"/>
                                 <figcaption>Jeff Siarto</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Young-Arygris.jpg" class="profimg" alt="Young Arygris" title="Young Arygris"/>
+                            <div className="professor">
+                                <img src="/images/Young-Arygris.jpg" className="profimg" alt="Young Arygris" title="Young Arygris"/>
                                 <figcaption>Young Arygris</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Susan-Bonner.jpg" class="profimg" alt="Susan Bonner" title="Susan Bonner"/>
+                            <div className="professor">
+                                <img src="/images/Susan-Bonner.jpg" className="profimg" alt="Susan Bonner" title="Susan Bonner"/>
                                 <figcaption>Susan Bonner</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Sandra-Braman.jpg" class="profimg" alt="Sandra Braman" title="Sandra Braman"/>
+                            <div className="professor">
+                                <img src="/images/Sandra-Braman.jpg" className="profimg" alt="Sandra Braman" title="Sandra Braman"/>
                                 <figcaption>Sandra Braman</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Celeste-Campos-Castillo.jpg" class="profimg" alt="Celeste Campos-Castillo" title="Celeste Campos-Castillo"/>
+                            <div className="professor">
+                                <img src="/images/Celeste-Campos-Castillo.jpg" className="profimg" alt="Celeste Campos-Castillo" title="Celeste Campos-Castillo"/>
                                 <figcaption>Celeste Campos-Castillo</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Amanda-Cote.jpg" class="profimg" alt="Amanda Cote" title="Amanda Cote"/>
+                            <div className="professor">
+                                <img src="/images/Amanda-Cote.jpg" className="profimg" alt="Amanda Cote" title="Amanda Cote"/>
                                 <figcaption>Amanda Cote</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Andrew-Dennis.jpg" class="profimg" alt="Andrew Dennis" title="Andrew Dennis"/>
+                            <div className="professor">
+                                <img src="/images/Andrew-Dennis.jpg" className="profimg" alt="Andrew Dennis" title="Andrew Dennis"/>
                                 <figcaption>Andrew Dennis</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/David-Ewoldsen.jpg" class="profimg" alt="David Ewoldsen" title="David Ewoldsen"/>
+                            <div className="professor">
+                                <img src="/images/David-Ewoldsen.jpg" className="profimg" alt="David Ewoldsen" title="David Ewoldsen"/>
                                 <figcaption>David Ewoldsen</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Ricardo-Guimaraes.jpg" class="profimg" alt="Ricardo Guimaraes" title="Ricardo Guimaraes"/>
+                            <div className="professor">
+                                <img src="/images/Ricardo-Guimaraes.jpg" className="profimg" alt="Ricardo Guimaraes" title="Ricardo Guimaraes"/>
                                 <figcaption>Ricardo Guimaraes</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Keith-Hampton.jpg" class="profimg" alt="Keith Hampton" title="Keith Hampton"/>
+                            <div className="professor">
+                                <img src="/images/Keith-Hampton.jpg" className="profimg" alt="Keith Hampton" title="Keith Hampton"/>
                                 <figcaption>Keith Hampton</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Jean-Hardy.jpg" class="profimg" alt="Jean Hardy" title="Jean Hardy"/>
+                            <div className="professor">
+                                <img src="/images/Jean-Hardy.jpg" className="profimg" alt="Jean Hardy" title="Jean Hardy"/>
                                 <figcaption>Jean Hardy</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Cory-Heald.jpg" class="profimg" alt="Cory Heald" title="Cory Heald"/>
+                            <div className="professor">
+                                <img src="/images/Cory-Heald.jpg" className="profimg" alt="Cory Heald" title="Cory Heald"/>
                                 <figcaption>Cory Heald</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Carrie-Heeter.jpg" class="profimg" alt="Carrie Heeter" title="Carrie Heeter"/>
+                            <div className="professor">
+                                <img src="/images/Carrie-Heeter.jpg" className="profimg" alt="Carrie Heeter" title="Carrie Heeter"/>
                                 <figcaption>Carrie Heeter</figcaption>
                             </div>
-                                <div class="professor">
-                                <img src="/images/Megan-Knittel.jpg" class="profimg" alt="Megan Knittel" title="Megan Knittel"/>
+                                <div className="professor">
+                                <img src="/images/Megan-Knittel.jpg" className="profimg" alt="Megan Knittel" title="Megan Knittel"/>
                             <figcaption>Megan Knittel</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Nick-Kwiatowski.jpg" class="profimg" alt="Nick Kwiatowski" title="Nick Kwiatowski"/>
+                            <div className="professor">
+                                <img src="/images/Nick-Kwiatowski.jpg" className="profimg" alt="Nick Kwiatowski" title="Nick Kwiatowski"/>
                                 <figcaption>Nick Kwiatowski</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Hee-Rin-Lee.jpg" class="profimg" alt="Hee Rin Lee" title="Hee Rin Lee"/>
+                            <div className="professor">
+                                <img src="/images/Hee-Rin-Lee.jpg" className="profimg" alt="Hee Rin Lee" title="Hee Rin Lee"/>
                                 <figcaption>Hee Rin Lee</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Megh-Marathe.jpg" class="profimg" alt="Megh Marathe" title="Megh Marathe"/>
+                            <div className="professor">
+                                <img src="/images/Megh-Marathe.jpg" className="profimg" alt="Megh Marathe" title="Megh Marathe"/>
                                 <figcaption>Megh Marathe</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Casey-ODonnell.jpg" class="profimg" alt="Casey O'Donnell" title="Casey O'Donnell"/>
+                            <div className="professor">
+                                <img src="/images/Casey-ODonnell.jpg" className="profimg" alt="Casey O'Donnell" title="Casey O'Donnell"/>
                                 <figcaption>Casey O'Donnell</figcaption>
                             </div>
-                            <div class="professor">
-                             <img src="/images/Jennifer-Olson.jpg" class="profimg" alt="Jennifer Olson" title="Jennifer Olson"/>
+                            <div className="professor">
+                             <img src="/images/Jennifer-Olson.jpg" className="profimg" alt="Jennifer Olson" title="Jennifer Olson"/>
                              <figcaption>Jennifer Olson</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Wei-Peng.jpg" class="profimg" alt="Wei Peng" title="Wei Peng"/>
+                            <div className="professor">
+                                <img src="/images/Wei-Peng.jpg" className="profimg" alt="Wei Peng" title="Wei Peng"/>
                                 <figcaption>Wei Peng</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Daniel-Putman.jpg" class="profimg" alt="Daniel Putman" title="Daniel Putman"/>
+                            <div className="professor">
+                                <img src="/images/Daniel-Putman.jpg" className="profimg" alt="Daniel Putman" title="Daniel Putman"/>
                                 <figcaption>Daniel Putman</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Rabindra-Ratan.jpg" class="profimg" alt="Rabindra Ratan" title="Rabindra Ratan"/>
+                            <div className="professor">
+                                <img src="/images/Rabindra-Ratan.jpg" className="profimg" alt="Rabindra Ratan" title="Rabindra Ratan"/>
                                 <figcaption>Rabindra Ratan</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Ruth-Shillair.jpg" class="profimg" alt="Ruth Shillair" title="Ruth Shillair"/>
+                            <div className="professor">
+                                <img src="/images/Ruth-Shillair.jpg" className="profimg" alt="Ruth Shillair" title="Ruth Shillair"/>
                                 <figcaption>Ruth Shillair</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Sarah-Swierenga.jpg" class="profimg" alt="Sarah Swierenga" title="Sarah Swierenga"/>
+                            <div className="professor">
+                                <img src="/images/Sarah-Swierenga.jpg" className="profimg" alt="Sarah Swierenga" title="Sarah Swierenga"/>
                                 <figcaption>Sarah Swierenga</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Ryan-Thompson.jpg" class="profimg" alt="Ryan Thompson" title="Ryan Thompson"/>
+                            <div className="professor">
+                                <img src="/images/Ryan-Thompson.jpg" className="profimg" alt="Ryan Thompson" title="Ryan Thompson"/>
                                 <figcaption>Ryan Thompson</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Morgan-Vigil-Hayes.jpg" class="profimg" alt="Morgan Vigil-Hayes" title="Morgan Vigil-Hayes"/>
+                            <div className="professor">
+                                <img src="/images/Morgan-Vigil-Hayes.jpg" className="profimg" alt="Morgan Vigil-Hayes" title="Morgan Vigil-Hayes"/>
                                 <figcaption>Morgan Vigil-Hayes</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Valeta-Wensloff.jpg" class="profimg" alt="Valeta Wensloff" title="Valeta Wensloff"/>
+                            <div className="professor">
+                                <img src="/images/Valeta-Wensloff.jpg" className="profimg" alt="Valeta Wensloff" title="Valeta Wensloff"/>
                                 <figcaption>Valeta Wensloff</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Brian-Winn.jpg" class="profimg" alt="Brian Winn" title="Brian Winn"/>
+                            <div className="professor">
+                                <img src="/images/Brian-Winn.jpg" className="profimg" alt="Brian Winn" title="Brian Winn"/>
                                 <figcaption>Brian Winn</figcaption>
                             </div>
-                            <div class="professor">
-                                <img src="/images/Susan-Wyche.jpg" class="profimg" alt="Susan Wyche" title="Susan Wyche"/>
+                            <div className="professor">
+                                <img src="/images/Susan-Wyche.jpg" className="profimg" alt="Susan Wyche" title="Susan Wyche"/>
                                 <figcaption>Susan Wyche</figcaption>
                             </div>
                             </div>
                         </div>
                     </div>
             )}
-            <button onClick={handleScrollTop} class="backtotopbutton">^</button>
+            <button onClick={handleScrollTop} className="backtotopbutton">^</button>
         </div>
     )
 }
