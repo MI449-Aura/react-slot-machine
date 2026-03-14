@@ -67,8 +67,22 @@ function Home() {
 
     return(
         <div>
-            
-            <PokerRoll />
+            <div id="cards">
+                <div id="cards-sect-1">
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                </div>
+                <div id="cards-sect-2">
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                    <img className="card-img"></img>
+                </div>
+            </div>
             <nav className="nav">
                 <ul className="logo-button">
                     <p>MSU Media & Information Slot Machine</p>
