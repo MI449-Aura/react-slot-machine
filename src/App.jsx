@@ -139,7 +139,7 @@ function Home() {
                             <img src={getImageUrl(winningProfessor.image)} alt="Winning Professor" className="jackpot-img"/>
                             <h2>{winningProfessor.name}</h2>
                             <p>{winningProfessor.position}</p>
-                            <a href={winningProfessor.something_cool} target="_blank" rel="noopener noreferrer" className="something-cool-btn">Reward</a>
+                            <button className="reward-button" onClick={() => window.open(winningProfessor.something_cool, '_blank')}>Reward</button>
                         </div>
                     </div>
                 </div>
