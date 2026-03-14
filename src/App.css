@@ -267,3 +267,21 @@
     linear-gradient(#D50000, #4A0000) padding-box,
     linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
 }
+
+.card-1, .card-2, .card-3, .card-4, .card-5 {
+  padding: 1%;
+  width: 50px !important;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+}
+
+#card-sect-1 {
+  float: left;
+}
+
+#card-sect-2 {
+  float: right !important;
+}

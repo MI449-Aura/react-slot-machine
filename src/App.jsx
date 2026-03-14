@@ -56,6 +56,7 @@ function Home() {
             setWinningProfessor(winningProfessor);
             setShowJackpot(true);
         }
+        
     };
 
     const handleScrollTop = () => {
@@ -67,22 +68,6 @@ function Home() {
 
     return(
         <div>
-            <div id="cards">
-                <div id="cards-sect-1">
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                </div>
-                <div id="cards-sect-2">
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                    <img className="card-img"></img>
-                </div>
-            </div>
             <nav className="nav">
                 <ul className="logo-button">
                     <p>MSU Media & Information Slot Machine</p>
@@ -117,6 +102,7 @@ function Home() {
                     </ul>
                 </div>
                 <button className="spinbutton" onClick={handleSpin}>SPIN</button>
+                <PokerRoll Trigger={spinCount} />
                 <Quote spinTrigger={spinCount} />
             </div>
             <div className="pastspins">
