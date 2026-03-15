@@ -138,7 +138,7 @@
   gap: 1rem;
 }
 
-.slot-machine img {
+.slot-machine > img {
   margin: auto;
   padding: 40px 0px 40px 0px;
   width: 100%;
@@ -178,13 +178,58 @@
       #b8860b,
       #fff4c2
     ) border-box;
+  overflow: hidden;
+}
+
+.slot li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slotimg {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   border-radius: 35px;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes slot-roll-in {
+  0% {
+    transform: translateY(-145px);
+    opacity: 0;
+    filter: blur(2.5px);
+  }
+  65% {
+    transform: translateY(14px);
+    opacity: 1;
+    filter: blur(0.6px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.slot-roll {
+  animation: slot-roll-in 780ms cubic-bezier(0.16, 0.95, 0.25, 1) both;
+}
+
+.slot-roll-1 {
+  animation-delay: 0ms;
+}
+
+.slot-roll-2 {
+  animation-delay: 220ms;
+}
+
+.slot-roll-3 {
+  animation-delay: 440ms;
 }
 
 .homespinrow {
@@ -204,6 +249,7 @@
 }
 
 .backtotopbutton {
+  --hover-opacity: 0;
   margin-top: 20px;
   padding-top: 10px;
   color: #f6e27a;
@@ -212,15 +258,23 @@
   text-shadow: 2px 2px 4px black;
   border: 4px solid transparent;
   border-radius: 50px;
+  transition: --hover-opacity 250ms ease;
   background:
+    linear-gradient(rgba(213, 0, 0, var(--hover-opacity)), rgba(74, 0, 0, var(--hover-opacity))) padding-box,
     linear-gradient(#43D400, #154300) padding-box,
     linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
 }
 
 .backtotopbutton:hover {
-  background:
-    linear-gradient(#D50000, #4A0000) padding-box,
-    linear-gradient(135deg, #f6e27a, #e6b422, #b8860b, #fff4c2) border-box;
+  --hover-opacity: 1;
+  border-color: transparent;
+  outline: none;
+}
+
+.backtotopbutton:focus,
+.backtotopbutton:focus-visible {
+  border-color: transparent;
+  outline: none;
 }
 
 

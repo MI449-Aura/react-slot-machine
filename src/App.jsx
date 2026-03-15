@@ -113,17 +113,32 @@ function Home() {
                 <div className="slots">
                     <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[0])} className="slotimg" alt="Slot 1"/>
+                            <img
+                                key={`slot-1-${spinCount}`}
+                                src={getImageUrl(slotResults[0])}
+                                className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-1' : ''}`}
+                                alt="Slot 1"
+                            />
                         </li>
                     </ul>
                     <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[1])} className="slotimg" alt="Slot 2"/>
+                            <img
+                                key={`slot-2-${spinCount}`}
+                                src={getImageUrl(slotResults[1])}
+                                className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-2' : ''}`}
+                                alt="Slot 2"
+                            />
                         </li>
                     </ul>
                     <ul className="slot">
                         <li>
-                            <img src={getImageUrl(slotResults[2])} className="slotimg" alt="Slot 3"/>
+                            <img
+                                key={`slot-3-${spinCount}`}
+                                src={getImageUrl(slotResults[2])}
+                                className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-3' : ''}`}
+                                alt="Slot 3"
+                            />
                         </li>
                     </ul>
                 </div>
