@@ -70,10 +70,8 @@ function Home() {
 
     const instantJackpot = () => {
         const name = jackpotName || "Placeholder";
-        if (professors.length === 0) return;
 
-        const winner = professors.find(p => p.name === name) || professors[0];
-        if (!winner) return;
+        const winner = professors.find(p => p.name === name) || professors[11];
 
         const newResults = [winner.image, winner.image, winner.image];
         setSlotResults(newResults);
