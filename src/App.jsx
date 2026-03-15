@@ -13,6 +13,7 @@ function Home() {
     const [slotResults, setSlotResults] = useState([null, null, null]);
     const [pastSpins, setPastSpins] = useState([]);
     const [spinCount, setSpinCount] = useState(0);
+    const [jackpotName, setJackpotName] = useState('');
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/MI449-Aura/mi-department-professors-api/main/professors.json')
@@ -68,30 +69,25 @@ function Home() {
       };
 
     const instantJackpot = () => {
-        const newResults = [
-            professors[11].image,
-            professors[11].image,
-            professors[11].image
-        ];
+        const name = jackpotName || "Placeholder";
+        if (professors.length === 0) return;
+
+        const winner = professors.find(p => p.name === name) || professors[0];
+        if (!winner) return;
+
+        const newResults = [winner.image, winner.image, winner.image];
         setSlotResults(newResults);
 
-        setPastSpins( prev => {
-            const updated = [[...newResults], ...prev].slice(0,5);
+        setPastSpins(prev => {
+            const updated = [[...newResults], ...prev].slice(0, 5);
             return updated;
-        })
+        });
         setSpinCount(prev => prev + 1);
 
-        if (
-            newResults[0] && 
-            newResults[0] === newResults[1] && 
-            newResults[1] === newResults[2]
-        ) {
-            const winningProfessor = professors.find(p => p.image === newResults[0]);
-            setWinningProfessor(winningProfessor);
-            setShowJackpot(true);
-        }
-    }
-    
+        setWinningProfessor(winner);
+        setShowJackpot(true);
+    };
+
     return(
         <div>
             <nav className="nav">
@@ -146,6 +142,13 @@ function Home() {
                 <PokerRoll Trigger={spinCount} />
                 <Quote spinTrigger={spinCount} />
                 <button className="jackpot-button" onClick={instantJackpot}>Instant Jackpot</button>
+                <input
+                    type="text"
+                    id="jackpotInput"
+                    value={jackpotName}
+                    onChange={e => setJackpotName(e.target.value)}
+                    placeholder="Enter Name"
+                />
                 <p>^Grading Purposes^</p>
             </div>
             <div className="pastspins">

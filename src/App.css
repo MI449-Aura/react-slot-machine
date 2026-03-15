@@ -344,3 +344,17 @@
   justify-content: space-between;
   width: 100%;
 }
+
+#jackpotInput{
+  display: block;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  width: 150px;
+  padding: 2px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #383838;
+  font-weight: 800;
+  border-width: 5px;
+
+}

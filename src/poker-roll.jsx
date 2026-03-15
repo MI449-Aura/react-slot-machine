@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { jsxDEV } from 'react/jsx-dev-runtime';
 
 function PokerRoll({Trigger}){
 
     const [showDeck, setDeck] = useState([]);
+    const [professors, setProfessors] = useState([])
     let cardList = [];
     
     useEffect(() => {
@@ -12,7 +14,6 @@ function PokerRoll({Trigger}){
             .catch(err => console.error('Failed to load deck:', err));
     }, [Trigger]);
 
-    
     for(let i = 0; i < 5; i++){
         if (showDeck.length === 0) return null;
         const currentCard = showDeck[Math.floor(Math.random() * showDeck.length)];
