@@ -148,6 +148,7 @@ function Home() {
                     placeholder="Enter Name"
                 />
                 <p>^Grading Purposes^</p>
+                <p>If name doesn't match professors in list, will return Jeff!</p>
             </div>
             <div className="pastspins">
                 <h2>Past 5 Spins</h2>
