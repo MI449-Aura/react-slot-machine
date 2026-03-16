@@ -89,9 +89,9 @@ function Home() {
     return(
         <div>
             <nav className="nav">
-                <ul className="logo-button">
+                <div className="logo-button">
                     <p>MSU Media & Information Slot Machine</p>
-                </ul>
+                </div>
                 <ul className="nav-button">
                     <li>
                         <button onClick={() => setShowHowToPlay(true)}>How To Play</button>
@@ -111,7 +111,7 @@ function Home() {
                                 key={`slot-1-${spinCount}`}
                                 src={getImageUrl(slotResults[0])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-1' : ''}`}
-                                alt="Slot 1"
+                                
                             />
                         </li>
                     </ul>
@@ -121,7 +121,7 @@ function Home() {
                                 key={`slot-2-${spinCount}`}
                                 src={getImageUrl(slotResults[1])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-2' : ''}`}
-                                alt="Slot 2"
+                                
                             />
                         </li>
                     </ul>
@@ -131,7 +131,7 @@ function Home() {
                                 key={`slot-3-${spinCount}`}
                                 src={getImageUrl(slotResults[2])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-3' : ''}`}
-                                alt="Slot 3"
+                                
                             />
                         </li>
                     </ul>
@@ -161,6 +161,7 @@ function Home() {
                                         className="resultimg"
                                         src={getImageUrl(imgPath)}
                                         alt={`Past Spin ${index + 1}`}
+                                        onLoad={(e) => e.currentTarget.classList.add("loaded")}
                                     />
                                 </li>
                             ))}
@@ -168,9 +169,9 @@ function Home() {
                     ))}
                     {Array(5 - pastSpins.length).fill().map((_, index) => (
                         <ul key={`empty-${index}`} className="homespinrow">
-                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
-                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
-                            <li><img className="resultimg" src="/images/placeholder.jpg" alt="Empty Slot"/></li>
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt=""/></li>
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt=""/></li>
+                            <li><img className="resultimg" src="/images/placeholder.jpg" alt=""/></li>
                         </ul>
                     ))}
                 </section>

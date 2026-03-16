@@ -254,11 +254,6 @@
   
 }
 
-.resultimg {
-  border: 6px, solid, transparent;
-  border-color: black;
-  border-radius: 15px;
-}
 
 .backtotopbutton {
   --hover-opacity: 0;
@@ -291,12 +286,14 @@
 
 
 .resultimg {
-  list-style: none;
   height: 200px;
   width: 200px;
-  padding: 0;
-  margin: 0px;
-  gap: 1rem;
+  display: block;
+  opacity: 0;
+}
+
+.resultimg.loaded {
+  opacity: 1;
   border: 15px solid transparent;
   border-radius: 50px;
   background:
