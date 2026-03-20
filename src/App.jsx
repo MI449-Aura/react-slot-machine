@@ -111,6 +111,7 @@ function Home() {
                                 key={`slot-1-${spinCount}`}
                                 src={getImageUrl(slotResults[0])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-1' : ''}`}
+                                onLoad={(e) => e.currentTarget.classList.add("loaded")}
                                 
                             />
                         </li>
@@ -121,6 +122,7 @@ function Home() {
                                 key={`slot-2-${spinCount}`}
                                 src={getImageUrl(slotResults[1])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-2' : ''}`}
+                                onLoad={(e) => e.currentTarget.classList.add("loaded")}
                                 
                             />
                         </li>
@@ -131,6 +133,7 @@ function Home() {
                                 key={`slot-3-${spinCount}`}
                                 src={getImageUrl(slotResults[2])}
                                 className={`slotimg ${spinCount > 0 ? 'slot-roll slot-roll-3' : ''}`}
+                                onLoad={(e) => e.currentTarget.classList.add("loaded")}
                                 
                             />
                         </li>
